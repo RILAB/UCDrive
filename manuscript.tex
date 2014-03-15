@@ -20,7 +20,7 @@
 %----------------------------------------
 \title{... evidence for selection on maize centromere repeats}
 \author[1]{Siddharth Bhadra-Lobo}
-\author[1]{Christopher Fiscus}
+\author[1]{Christopher J. Fiscus}
 \author[1]{Tyler V. Kent}
 \author[1]{Nicole Soltis}
 \author[1]{Timothy T. Yang} 
@@ -60,7 +60,13 @@ All citations need to have a bibtex formatted entry in the file "references.bib"
 \subsection{Estimation of CentC Abundance} %Nicole
 
 \subsection{Genome-Wide Association Analyses} %Chris
-
+Population structure was inferred using \emph{structure} software obtained from \url{http://pritchardlab.stanford.edu/structure.html}.  The basic algorithm of this software was first described by Pritchard, Stephens, \& Donnelly \cite{Pritchard2000} and extensions to the algorithm were described by Falush, Stephens \& Pritchard \cite{Falush2003}, \cite{Falush2007} and Hubisz, Falush, Stephens \& Pritchard \cite{Hubisz2009}. A randomly generated 10,000 SNP subset from Jiao et al dataset was used to generate q matrices and estimated natural log probability of the data for 1-20 maximum populations.  The length of burnin was 10000 and the number of MCMC reps after the burnin period was 20000.  The natural log probability of the data and delta K values for 3 trials were examined, revealing candidate K values at 3 and 12 assumed populations.    
+% change wording in second sentence to be more readable.
+% citation for Jiao dataset
+% more info on burnin and MCMC reps
+% method to determine K needs citation (Ln P(D) & delta K)
+% general editing
+% add section about GWAS using TASSEL 
 \subsection{Imputation and Identity by Descent} %Tyler
 
 \section{Results}
