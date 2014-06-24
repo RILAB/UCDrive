@@ -80,9 +80,10 @@ Here, we present evidence for/against drive on centromere repeat abundance in ma
 
 \subsection{Relative Genome Size Estimation } %Sid
 
-In order to relate CentC abundance to Centromere size, the size of the genome being referenced against must also be known, relative to the other genomes in which CentC abundance is also being estimated. To estimate genome size in the Jiao inbred maize lines, sequenced complementary DNA from \emph{Zea mays} reference genome version 3 was aligned against all Jiao lines. Using the Burroughs-Wheeler Aligner (BWA) mem function, number of Reads Mapped and Total Reads from each line was found \cite{BWA}. SAMtools was used to read the BWA mem alignment values from their default Binary Alignment Map (bam) format. These values were read into {\bf RStudio} as a tab delimited table and {\bf R} was used to aggregate the data based on the line it came from to avoid duplicate lines \cite{R} \cite{RStudio}. From the consolidated data, simple column arithmetic was done to divide Reads Mapped by Total Reads then multiply by 100 to find percent abundance CentC for the Jiao Lines. 
+In order to relate CentC abundance to Centromere size, the size of the genome being referenced against must also be known, relative to the other genomes in which CentC abundance is also being estimated \cite{ncbi nucleotide database}.. To estimate genome size in the Jiao inbred maize lines, sequenced complementary DNA from \emph{Zea mays} reference genome version 3 was aligned against all Jiao lines. Using the Burroughs-Wheeler Aligner (BWA) mem function, number of Reads Mapped and Total Reads from each line was found \cite{BWA}. SAMtools was used to read the BWA mem alignment values from their default Binary Alignment Map (bam) format. These values were read into {\bf RStudio} as a tab delimited table and {\bf R} was used to aggregate the data based on the line it came from to avoid duplicate lines \cite{R} \cite{RStudio}. From the consolidated data, simple column arithmetic was done to divide Reads Mapped by Total Reads then multiply by 100 to find percent abundance CentC for the Jiao Lines. 
 
 %Cite Jiao Lines.
+%Cite CentC database
 
 
 Finding abundance of CentC in Megabases
