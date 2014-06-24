@@ -58,7 +58,7 @@ All citations need to have a bibtex formatted entry in the file "references.bib"
 
 Centromeres are dense, heterochromatic regions on chromosomes that act as an assembly site for the kinetochore complex during meiosis and mitosis and link sister chromatids together.  The role of the centromere is almost universally conserved among eukaryotes, despite a lack of sequence similarity in the centromeres of closely related species \cite{Henikoff2001}.  Centromeric DNA is some of the most rapidly evolving sequence in eukaryotes \cite{Csink1998}, \cite{Henikoff2001} and is hypothesized to play a significant role in speciation \cite{Henikoff2001}.  The functional centromere is epigenetically defined by the presence of nucleosomes featuring a histone H3 variant unique to the centromere, called CenH3 \cite{Henikoff2001}.  CenH3 replaces the standard histone H3 in the H2A-H2B-H3-H4 histone core and is thought to be responsible for the centromere's exclusive heterochromatic state. 
 
-In maize, the DNA sequence of the functional centromere is composed primarily of CentC satellites and retrotransposons \cite{Nagaki2003}.  Each maize centromere has a unique organization of these elements \cite{Ananiev1998}, yet functions in the same capacity.  CentC satellite tandem repeats are 156 base pairs in length, are localized in centromere regions, and are unique to maize \cite{Ananiev1998}.  The sequence of CentC is largely conserved between individuals but single nucleotide polymorphisms have been observed \cite{Ananiev1998}.  
+In maize, the DNA sequence of the functional centromere is composed primarily of CentC satellites and retrotransposons \cite{Nagaki2003}.  Each maize centromere has a unique organization of these elements \cite{Ananiev1998}, yet functions in the same capacity.  CentC satellite tandem repeats are generally 156 base pairs (bp) in length, are localized in centromere regions, and are unique to maize \cite{Ananiev1998}.  The sequence of CentC is largely conserved between individuals but single nucleotide polymorphisms have been observed \cite{Ananiev1998}.  
 
 % Expand description of Centromere
 % Add to why CentC
@@ -72,7 +72,7 @@ Here, we present evidence for/against drive on centromere repeat abundance in ma
 
 \subsection{CentC Mapping on B73 Reference Genomes, Versions 1-3} %Sid 
 
-79 nucleotide sequences of Maize Centromeric repeats CentC were downloaded from \cite{ncbi nucleotide database}. Using BLAST to align the 79 queries against the B73 reference genome versions 1, 2, and 3 \cite{MaizeGDB} \cite{BLAST}. Reference Genome version 3 was found downloaded from  \url{http://plants.ensembl.org/Zea_mays/Info/Index/}. The query file was built from all 79 CentC repeats concatenated into one header less file. The BLAST outputs were formatted into a tab delimited table and read into {\bf RStudio} and graphed with {\bf R} \cite{R} \cite{RStudio}. The BLAST hittable for the 79 CentC hits from each individual reference Genome version was mapped to each of the 10 Maize chromosomes by finding the length of each chromosome per reference genome version. Chromosome lengths were found taking a character count, excluding header lines, of each chromosome from the reference genome .fasta files. 
+79 nucleotide sequences of Maize Centromeric repeats CentC were downloaded from \cite{ncbi nucleotide database}. Using BLAST to align the 79 queries against the B73 reference genome versions 1, 2, and 3 \cite{MaizeGDB} \cite{BLAST}. Reference Genome version 3 was found downloaded from  \url{http://plants.ensembl.org/Zea_mays/Info/Index/}. The query file was built from all 79 CentC repeats concatenated into one header less file. The BLAST outputs were formatted into a tab delimited table and read into {\bf RStudio} and graphed with {\bf R} \cite{R} \cite{RStudio}. The BLAST hittable for the 79 CentC hits from each individual reference Genome version was mapped to each of the 10 Maize chromosomes by finding the length of each chromosome per reference genome version. Chromosome lengths were found taking a character count, excluding header lines, of each chromosome from the reference genome .fasta format files. 
 
 %Cite ncbi nucleotide database
 %Cite B73 MaizeGDB
@@ -80,17 +80,17 @@ Here, we present evidence for/against drive on centromere repeat abundance in ma
 
 \subsection{Relative Genome Size Estimation } %Sid
 
-In order to relate CentC abundance to Centromere size, the size of the genome being referenced against must also be known, relative to the other genomes in which CentC abundance is also being estimated \cite{ncbi nucleotide database}.. To estimate genome size in the Jiao inbred maize lines, sequenced complementary DNA from \emph{Zea mays} reference genome version 3 was aligned against all Jiao lines. Using the Burroughs-Wheeler Aligner (BWA) mem function, number of Reads Mapped and Total Reads from each line was found \cite{BWA}. SAMtools was used to read the BWA mem alignment values from their default Binary Alignment Map (bam) format. These values were read into {\bf RStudio} as a tab delimited table and {\bf R} was used to aggregate the data based on the line it came from to avoid duplicate lines \cite{R} \cite{RStudio}. From the consolidated data, simple column arithmetic was done to divide Reads Mapped by Total Reads then multiply by 100 to find percent abundance CentC for the Jiao Lines. 
+In order to relate CentC abundance to Centromere size, the size of the genome being referenced against must also be known, relative to the other genomes in which CentC abundance is also being estimated \cite{ncbi nucleotide database}.. To estimate genome size in the Jiao inbred maize lines, sequenced complementary DNA (cDNA) from \emph{Zea mays} reference genome version 3 was aligned against the Jiao dataset \cite{Jiao2012}. Using the Burroughs-Wheeler Aligner (BWA) mem function, number of Reads Mapped and Total Reads from each line was found \cite{BWA}. SAMtools was used to read the BWA mem alignment values from their default Binary Alignment Map (bam) format \cite{SAMtools}. These values were read into {\bf RStudio} as a tab delimited table and {\bf R} was used to aggregate the data based on the line it came from to avoid duplicate lines \cite{R} \cite{RStudio}. From the consolidated data, simple column arithmetic was done to divide Reads Mapped by Total Reads then multiplied by 100 to find percent abundance CentC for the Jiao dataset. 
 
 %Cite Jiao Lines.
 %Cite CentC database
 
 
-Finding abundance of CentC in Megabases
+Finding abundance of CentC in Megabases (Mb)
 
 $\dfrac{CentC}{Total Reads}\times Mb$ = Mb CentC	
 
-Finding genome size with relation to abundance of cDNA in Megabases
+Finding genome size with relation to abundance of cDNA in Megabases (Mb)
 
 $\dfrac{\dfrac{1}{cDNA}}{Total Reads}$ $\alpha$ Mb
 
