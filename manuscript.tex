@@ -70,22 +70,26 @@ Here, we present evidence for/against drive on centromere repeat abundance in ma
 
 \subsection{Estimation of CentC Abundance} %Nicole
 
-\subsection{Estimation of CentC Abundance} %Sid
+\subsection{CentC Mapping on B73 Reference Genomes, Versions 1-3} %Sid 
 
-%79 Zea mays CentC repeats were downloaded from ncbi nucleotide database.
-%Used BLAST to align 79 queries with reference genome B73 version 3. Query file was built from all 79 CentC repeats concatenated into one header less file, reference genome B73 available from maizeGDB. 
-%Used BWA mem to align BLAST outputs to Jiao inbred maize lines.
+79 nucleotide sequences of Maize Centromeric repeats CentC were downloaded from \cite{ncbi nucleotide database}. Using BLAST to align the 79 queries against the B73 reference genome version 3 \cite{MaizeGDB} \cite{BLAST}. The query file was built from all 79 CentC repeats concatenated into one header less file. The BLAST outputs were formatted into a tab delimited table and read into \emph{RStudio} and graphed with \proglang{R} \cite{R} \cite{RStudio}. The BLAST hittable for the 79 CentC hits from each individual reference Genome version was mapped to each of the 10 Maize chromosomes by finding the length of each chromosome per reference genome version. Chromosome lengths were found taking a character count, excluding header lines, of each chromosome from the reference genome .fasta files. 
+%Cite ncbi nucleotide database
+%Cite B73 MaizeGDB
+%Cite refines versions 1 and 2 from Ensemble
+
+\subsection{Relative Genome Size Estimation } %Sid
+
+Finding abundance of CentC in Megabases
+$\dfrac{CentC}{Total Reads}\times Mb$ = Mb CentC	
+
+Finding genome size with relation to abundance of cDNA in Megabases
+$\dfrac{\dfrac{1}{cDNA}}{Total Reads}$ $\alpha$ Mb
+
 %Used SAMtools to read BWA mem alignments values in bam files. 
 %From data took values for Total_Reads and Reads_Mapped.
 %Used R  and RStudio to aggregate data based on the line it came from to avoid duplicate lines.
 %Then did simple column arithmetic, to divide ReadsAligned by ReadsTotal then multiply by 100 to get percent abundance CentC for Jiao Lines.
-%Used RStudio to make a histogram showing CentC abundance across Jiao lines. Number of Jiao Lines vs Percent Reads Mapped. 
-
-\subsection{Relative Genome Size Estimation } %Sid
-
-$\dfrac{CentC}{Total Reads}\times Mb$ = Mb CentC	
-
-$\dfrac{\dfrac{1}{cDNA}}{Total Reads}$ $\alpha$ Mb
+%Used RStudio to make a histogram showing CentC abundance across Jiao lines. Number of Jiao Lines vs Percent Reads Mapped.
 
 
 \subsection{Genome-Wide Association Analyses} %Chris
